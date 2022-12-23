@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <!-- Font Awsome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+            background:#fff;
+        }
+        .admntbl{
+            background:#fff;
+            width:100%;
+        }
+        #imgadmin{
+    height:310px;
+    width:100%;
+}
+.admnhead{
+    background-color:#69b5ef;
+}
+#logo{
+  color:gold;
+  margin-top:50px;
+  margin-left:740px;
+}
+#logoname{
+    margin-left:660px;
+    color:gold;
+    margin-bottom:50px;
+}
+.admnnavbar{
+    background-color:#333;
+}
+.addctgry{
+    
+    margin-left:260px;
+    margin-top:20px;
+    margin-bottom:20px;
+    Height:40px; 
+    Width:auto;
+    background:none;
+    border:none;
+    color:white;
+    font-size:large;
+}
+.addctgry:hover{
+    color:gold;
+    
+}
+.addpdt{
+    
+    margin-left:145px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:large;
+    height:40px;
+}
+.addpdt:hover{
+    color:gold;
+    
+}
+.updtsts{
+    margin-left:160px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:large;
+    height:40px;
+}
+.updtsts:hover{
+    color:gold;
+}
+.admnlogout{
+    margin-left:150px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:large;
+    height:40px;
+}
+.admnlogout:hover{
+    color:gold;
+}
+.admnh2{
+    font-family:Arial;
+    font-style:oblique;
+    margin-top:120px;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="admntbl">
+            <tr>
+                <td class="admnhead">
+                    <a id="logo" class="fas fa-user fa-5x" align="center"></a>
+                    <br />
+                    <h1 id="logoname">Welcome Admin</h1>
+                </td>
+            </tr>
+              <tr>
+                <td class="admnnavbar">
+                    <asp:Button ID="cmdaddctgry" runat="server" CssClass="addctgry" Text="Add Category" PostBackUrl="~/AddCategory.aspx" />
+                    <asp:Button ID="cmdaddpdt" runat="server" CssClass="addpdt" Text="Add Product" PostBackUrl="~/AddProduct.aspx" />
+                    <asp:Button ID="amdupdstatious" runat="server" CssClass="updtsts" Text="Update Statious" PostBackUrl="~/UpdateStatious.aspx" />
+                    <asp:Button ID="cmdlogout" runat="server" CssClass="admnlogout" Text="Logout" OnClick="cmdlogout_Click" />
+                </td>
+            </tr>
+           
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

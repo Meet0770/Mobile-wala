@@ -1,0 +1,88 @@
+﻿body {
+    background-color:white;
+}
+#table{
+    width:100%;
+}
+#header{
+     position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #0984e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 9%;
+}
+#logo {
+}
+#search{
+      border-radius: 5rem;
+  height: 67px;
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+}
+#txtsearch{
+    border:none;
+    
+}
+#txtsearch:hover{
+    background-color:white;
+    border:none;
+    border-color:white;
+}
+/* Admin Section */
+#imgadmin{
+    height:415px;
+    width:1260px;
+}
+.admnnavbar{
+    align-items:center;
+    background-color:#f8f4f4;
+}
+.addctgry{
+    background-color:lightblue;
+    margin-left:80px;
+    Height:40px; 
+    Width:165px;
+}
+.addpdt{
+    margin-left:75px;
+    background-color:lightblue;
+    height:40px;
+}
+.uptstk{
+    margin-left:75px;
+    background-color:lightblue;
+    height:40px;
+    }
+.updtsts{
+    margin-left:75px;
+    background-color:lightblue;
+    height:40px;
+}
+.admnlogout{
+    margin-left:75px;
+    background-color:lightblue;
+    height:40px;
+}
+.admnh3{
+    margin-top:50px;
+    font-family:Arial;
+    font-style:oblique;
+}

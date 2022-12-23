@@ -1,0 +1,246 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <!-- Font Awsome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script src="https://kit.fontawsome.com/7dfd393420.js" crossorigin="anonymous"></script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        /*Table Part Css*/
+        #table {
+            height: 320px;
+            left: 0;
+            right: 0;
+            
+        }
+        /*Head Part Css Starts*/
+        .head{
+            background-color:#0984e3;
+            display:inline-block;
+            height:100px;
+            width:100%;
+            top:0;
+           
+            right:0;
+            left:0;
+            
+        }
+        
+        }
+        /*Head bar search Section Css Starts*/
+        /*Head bar icons Css Starts*/
+        #logo{
+            
+            
+        }
+        #social{
+            margin-left:1250px;
+            margin-top:-30px;
+        }
+        #scfb{
+            color:#fff;
+            margin-left:30px;
+        }
+        #scfb:hover{
+            color:gold;
+        }
+        #scig{
+            color:#fff;
+            margin-left:20px;
+        }
+        #scig:hover{
+            color:gold;
+        }
+        #scli{
+            color:#fff;
+            margin-left:20px;
+        }
+        #scli:hover{
+            color:gold;
+        }
+        #sctt{
+            color:#fff;
+            margin-left:20px;
+        }
+        #sctt:hover{
+            color:gold;
+        }
+        /*Head bar icons Css End*/
+        /*Head Part Css End*/
+        /*Navigation bar Css Starts*/
+        .navigation{
+            background-color:#333;
+            display:inline-block;
+            height:70px;
+            width:100%;
+            margin-top:-90px;
+            
+            right:0;
+            left:0;
+            top:72px;
+        }   
+        /*Navigation bar icons Part Css Starts*/
+        #proffile{
+            color:gold;
+            margin-left:70px;
+        }
+        #proffile:hover{
+            color:#fff;
+        }
+        #cart{
+            color:gold;
+            margin-left:150px;
+        }
+        #cart:hover{
+            color:#fff;
+        }
+        /*Navigation bar icons Part Css End*/
+        /*Navigation bar Buttons Css Starts*/
+        .cmdhome {
+            margin-left: 170px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            Height: 40px;
+            Width: auto;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+        }
+
+            .cmdhome:hover {
+                color: gold;
+            }
+
+        .cmdabtus {
+            margin-left: 155px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+            height: 40px;
+        }
+
+            .cmdabtus:hover {
+                color: gold;
+            }
+
+        .cmdcntus {
+            margin-left: 145px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+            height: 40px;
+        }
+
+            .cmdcntus:hover {
+                color: gold;
+            }
+
+        .updtsts {
+            margin-left: 150px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+            height: 40px;
+        }
+
+            .updtsts:hover {
+                color: gold;
+            }
+        .cmdlogout {
+            margin-left: 800px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: large;
+            height: 40px;
+        }
+        .cmdlogout:hover{
+            color:gold;
+        }
+        /*Navigation bar Buttons Css End*/
+        /*Navigation bar Css Starts*/
+        /*Content section Css Starts*/
+        #cph{
+            
+            right:0;
+            left:0;
+            margin-top:200px;
+            
+            bottom:auto;
+            height:auto;
+        }
+        /*Content section Css End*/
+        /*Footer section Css Starts*/
+        #footer{
+            background-color:#0984e3;
+            height:50px;
+            width:100%;
+            position:fixed;
+            display:inline-block;
+            bottom:0;
+            left:0;
+            right:0;
+        }
+        #imgfooter{
+           Height:55px;
+           margin-left:575px;
+           margin-top:20px;
+           
+       }
+        /*Footer section Css Starts*/
+    </style>
+</head>
+<body>
+    <p>
+        <br />
+    </p>
+    <form id="form1" runat="server">
+    <div>
+       
+    </div>
+       
+        <table id="table">
+            <tr>
+                <td class="head">
+                </td>
+            </tr>
+            <tr>
+                <td class="navigation">
+                  
+                  <asp:Image ID="logo" runat="server" ImageUrl="~/img/images.jpeg" align="center" Height="77px" Width="138px" />
+                  <asp:Button ID="cmdhome" runat="server" CssClass="cmdhome" Text="Home" PostBackUrl="~/Home.aspx" />
+                  <asp:Button ID="cmdlogout" runat="server" CssClass="cmdlogout" Text="Logout" OnClick="cmdlogout_Click" />
+                  <asp:Button ID="cmdlogin" runat="server" CssClass="cmdlogout" Text="Login" OnClick="cmdlogin_Click" />
+
+                    <a id="cart" class="fas fa-shopping-cart fa-2xl" href="ShoppingCart.aspx"></a>
+                    <asp:Label ID="lblcrtcnt" runat="server" ForeColor="White" Font-Size="Large"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td id="cph" >
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                     </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td id="footer">      
+                    <p align="center" style="font-size:medium;">&copy Mobile Wala and Accessories.</p>
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>
